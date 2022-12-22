@@ -16,3 +16,14 @@ h1 {
     font-size: 1000;
     font-weight: bold;
 }
+
+.selections-container {
+    display: flex;
+    
+}
+
+.color-container > button{
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50%;
+}

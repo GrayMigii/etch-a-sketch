@@ -38,8 +38,25 @@ const resetSquares = () => {
     
 }
 
+const selectColor = () => {
+    const magenta = document.querySelectorAll('.magenta');
+    const cyan = document.querySelectorAll('.cyan');
+    const yellow = document.querySelectorAll('.yellow');
+
+    magenta.addEventListener('click', () => {
+        currentColor = 'magenta';
+    });
+    cyan.addEventListener('click', () => {
+        currentColor = 'cyan';
+    });
+    yellow.addEventListener('click', () => {
+        currentColor = 'yellow';
+    });
+}
+
 const colorSquares = () => {
     const rows = document.querySelectorAll('.row');
+    //selectColor();
     rows.forEach(row => {
         row.addEventListener('mouseover', () => {
             row.style.backgroundColor = currentColor;
