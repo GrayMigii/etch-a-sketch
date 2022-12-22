@@ -16,3 +16,7 @@ h1 {
     font-size: 1000;
     font-weight: bold;
 }
+
+body * {
+    border: solid red 1px;
+}
