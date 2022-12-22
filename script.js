@@ -16,7 +16,7 @@ const createCanvas = (numberOfSquares) => {
     }
 }
 
-let currentColor = 'blue';
+var currentColor = 'blue';
 const sizeChangerBtn = document.querySelector('.size-changer');
 const resetBtn = document.querySelector('.reset');
 const container = document.querySelector('.container');
@@ -43,6 +43,7 @@ const selectColor = () => {
     const cyan = document.querySelectorAll('.cyan');
     const yellow = document.querySelectorAll('.yellow');
 
+
     magenta.addEventListener('click', () => {
         currentColor = 'magenta';
     });
@@ -56,7 +57,7 @@ const selectColor = () => {
 
 const colorSquares = () => {
     const rows = document.querySelectorAll('.row');
-    //selectColor();
+    //electColor();
     rows.forEach(row => {
         row.addEventListener('mouseover', () => {
             row.style.backgroundColor = currentColor;
@@ -72,8 +73,10 @@ sizeChangerBtn.addEventListener('click', () => {
     resetSquares();
 });
 
-
-
 createCanvas(16);
+
+//selectColor();
+
 colorSquares();
 resetSquares();
+
