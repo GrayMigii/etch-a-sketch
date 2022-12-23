@@ -72,6 +72,11 @@ const selectColor = () => {
 
 sizeChangerBtn.addEventListener('click', () => {
     let numberOfSquares = prompt('Enter the number of squares you want: ');
+    if (numberOfSquares > 100) {
+        prompt("you've exceeded the number of possible squares");
+        numberOfSquares = null;
+    } 
+    
     if (numberOfSquares === null) numberOfSquares = 16;
     deleteCanvas();
     createCanvas(numberOfSquares);
