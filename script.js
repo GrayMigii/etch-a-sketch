@@ -43,7 +43,6 @@ const colorSquares = () => {
     const rows = document.querySelectorAll('.row');
     rows.forEach(row => {
         row.addEventListener('mouseover', () => {
-            console.log(currentColor);
             row.style.backgroundColor = currentColor;
         });
     });
@@ -72,7 +71,8 @@ const selectColor = () => {
 }
 
 sizeChangerBtn.addEventListener('click', () => {
-    const numberOfSquares = prompt('Enter the number of squares you want: ');
+    let numberOfSquares = prompt('Enter the number of squares you want: ');
+    if (numberOfSquares === null) numberOfSquares = 16;
     deleteCanvas();
     createCanvas(numberOfSquares);
     colorSquares();

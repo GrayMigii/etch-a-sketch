@@ -15,15 +15,49 @@ h1 {
     color: yellow;
     font-size: 1000;
     font-weight: bold;
+    text-decoration-line: underline;
 }
 
 .selections-container {
+    width: 70vh;
     display: flex;
-    
+    margin-bottom: 3vh;
 }
 
 .color-container > button{
     height: 2vh;
     width: 2vh;
     border-radius: 50%;
+}
+
+.magenta {
+
+    background-color: magenta;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.cyan {
+    background-color: cyan;
+}
+
+.color-container {
+    display: flex;
+    align-items: center;
+    gap: .75vw;
+}
+
+.buttons-container {
+    margin-right: auto;
+}
+
+.buttons-container > button {
+    border: 2px solid yellow;
+    border-radius: .5vh;
+    background-color: rgb(131, 43, 131);
+    color: yellow;
+    padding: 1vh;
+    font-weight: bold;
 }
