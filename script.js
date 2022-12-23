@@ -16,7 +16,6 @@ const createCanvas = (numberOfSquares) => {
     }
 }
 
-var currentColor = 'blue';
 const sizeChangerBtn = document.querySelector('.size-changer');
 const resetBtn = document.querySelector('.reset');
 const container = document.querySelector('.container');
@@ -38,31 +37,38 @@ const resetSquares = () => {
     
 }
 
-const selectColor = () => {
-    const magenta = document.querySelectorAll('.magenta');
-    const cyan = document.querySelectorAll('.cyan');
-    const yellow = document.querySelectorAll('.yellow');
-
-
-    magenta.addEventListener('click', () => {
-        currentColor = 'magenta';
-    });
-    cyan.addEventListener('click', () => {
-        currentColor = 'cyan';
-    });
-    yellow.addEventListener('click', () => {
-        currentColor = 'yellow';
-    });
-}
+let currentColor = 'yellow';
 
 const colorSquares = () => {
     const rows = document.querySelectorAll('.row');
-    //electColor();
     rows.forEach(row => {
         row.addEventListener('mouseover', () => {
+            console.log(currentColor);
             row.style.backgroundColor = currentColor;
         });
     });
+}
+
+const selectColor = () => {
+    const magenta = document.querySelector('.magenta');
+    const cyan = document.querySelector('.cyan');
+    const yellow = document.querySelector('.yellow');
+    
+    magenta.addEventListener('click', () => {
+        currentColor = 'magenta';
+        colorSquares();
+    });
+
+    cyan.addEventListener('click', () => {
+        currentColor = 'cyan';
+        colorSquares();
+    });
+
+    yellow.addEventListener('click', () => {
+        currentColor = 'yellow';
+        colorSquares();
+    });
+
 }
 
 sizeChangerBtn.addEventListener('click', () => {
@@ -71,12 +77,10 @@ sizeChangerBtn.addEventListener('click', () => {
     createCanvas(numberOfSquares);
     colorSquares();
     resetSquares();
+    selectColor();
 });
 
 createCanvas(16);
-
-//selectColor();
-
 colorSquares();
 resetSquares();
-
+selectColor();
