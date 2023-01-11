@@ -42,7 +42,7 @@ let currentColor = 'yellow';
 const colorSquares = () => {
     const rows = document.querySelectorAll('.row');
     rows.forEach(row => {
-        row.addEventListener('mouseover', () => {
+        row.addEventListener('click', () => {
             row.style.backgroundColor = currentColor;
         });
     });
