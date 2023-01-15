@@ -66,7 +66,6 @@ sizeChangerBtn.addEventListener('click', () => {
     createCanvas(numberOfSquares);
     colorSquares();
     resetSquares();
-    selectColor();
 });
 
 createCanvas(defaultCanvasSize);
