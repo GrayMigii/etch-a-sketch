@@ -1,3 +1,10 @@
+const sizeChangerBtn = document.querySelector('.size-changer');
+const resetBtn = document.querySelector('.reset');
+const container = document.querySelector('.container');
+const color = document.querySelector('#color-picker');
+const defaultCanvasSize = 16;
+let currentColor = color.getAttribute('value');
+
 const createCanvas = (numberOfSquares) => {
     const maxCanvasSize = 70;
     const container = document.querySelector('.container');
@@ -16,10 +23,6 @@ const createCanvas = (numberOfSquares) => {
     }
 }
 
-const sizeChangerBtn = document.querySelector('.size-changer');
-const resetBtn = document.querySelector('.reset');
-const container = document.querySelector('.container');
-
 const deleteCanvas = () => {
     const columns = document.querySelectorAll('.column');
     columns.forEach(column => {
@@ -34,10 +37,7 @@ const resetSquares = () => {
             row.style.backgroundColor = 'white';
         });
     });
-    
 }
-
-let currentColor = 'yellow';
 
 const colorSquares = () => {
     const rows = document.querySelectorAll('.row');
@@ -49,25 +49,9 @@ const colorSquares = () => {
 }
 
 const selectColor = () => {
-    const magenta = document.querySelector('.magenta');
-    const cyan = document.querySelector('.cyan');
-    const yellow = document.querySelector('.yellow');
-    
-    magenta.addEventListener('click', () => {
-        currentColor = 'magenta';
-        colorSquares();
+    color.addEventListener('change', (e) => {
+        currentColor = e.target.value;
     });
-
-    cyan.addEventListener('click', () => {
-        currentColor = 'cyan';
-        colorSquares();
-    });
-
-    yellow.addEventListener('click', () => {
-        currentColor = 'yellow';
-        colorSquares();
-    });
-
 }
 
 sizeChangerBtn.addEventListener('click', () => {
@@ -85,7 +69,7 @@ sizeChangerBtn.addEventListener('click', () => {
     selectColor();
 });
 
-createCanvas(16);
+createCanvas(defaultCanvasSize);
 colorSquares();
 resetSquares();
 selectColor();

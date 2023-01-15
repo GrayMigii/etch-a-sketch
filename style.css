@@ -30,25 +30,6 @@ h1 {
     border-radius: 50%;
 }
 
-.magenta {
-
-    background-color: magenta;
-}
-
-.yellow {
-    background-color: yellow;
-}
-
-.cyan {
-    background-color: cyan;
-}
-
-.color-container {
-    display: flex;
-    align-items: center;
-    gap: .75vw;
-}
-
 .buttons-container {
     margin-right: auto;
 }
@@ -60,4 +41,7 @@ h1 {
     color: yellow;
     padding: 1vh;
     font-weight: bold;
+}
+
+#color-picker{
 }
