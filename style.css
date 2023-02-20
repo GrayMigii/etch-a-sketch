@@ -29,6 +29,11 @@ h1 {
     margin-right: auto;
 }
 
+.color-container {
+    display: flex;
+    gap: 10px;
+}
+
 .buttons-container > button {
     height: 32px;
     border: 2px solid yellow;
@@ -40,9 +45,11 @@ h1 {
 }
 
 #color-picker {
-    border: 2px solid yellow;
     padding: 0%;
     border-radius: 2px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: yellow;
 }
 
 input[type="color"] {
@@ -59,3 +66,12 @@ input[type="color"]::-webkit-color-swatch {
     border: none;
 }
 
+#eraser {
+    height: 28px;
+    width: 28px;
+    background-color: white;
+    border-radius: 2px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: gray;
+}
