@@ -2,8 +2,22 @@ const sizeChangerBtn = document.querySelector('.size-changer');
 const resetBtn = document.querySelector('.reset');
 const container = document.querySelector('.container');
 const color = document.querySelector('#color-picker');
+const eraser = document.querySelector('#eraser');
 const defaultCanvasSize = 16;
 let currentColor = color.getAttribute('value');
+
+eraser.addEventListener('click', () => {
+    color.style.borderColor = 'gray';
+    eraser.style.borderColor = 'yellow';
+    currentColor = 'white';
+});
+
+color.addEventListener('click', (e) => {
+    color.style.borderColor = 'yellow';
+    eraser.style.borderColor = 'gray';
+    currentColor = e.target.value;
+});
+
 
 const createCanvas = (numberOfSquares) => {
     const maxCanvasSize = 70;
