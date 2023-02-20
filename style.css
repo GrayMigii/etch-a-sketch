@@ -5,6 +5,7 @@
 }
 
 body {
+    box-sizing: border-box;
     background-color: purple;
     display: flex;
     flex-direction: column;
@@ -24,17 +25,12 @@ h1 {
     margin-bottom: 3vh;
 }
 
-.color-container > button{
-    height: 2vh;
-    width: 2vh;
-    border-radius: 50%;
-}
-
 .buttons-container {
     margin-right: auto;
 }
 
 .buttons-container > button {
+    height: 32px;
     border: 2px solid yellow;
     border-radius: .5vh;
     background-color: rgb(131, 43, 131);
@@ -51,6 +47,8 @@ h1 {
 
 input[type="color"] {
     border: none;
+    height: 32px;
+    width: 32px;
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
